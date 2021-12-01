@@ -27,18 +27,15 @@ public class Workers extends Shorties.ShortiesPersonality {
     }
 
     protected void setCountWorkers(int value,Ponchic ponchic) throws Exceptions.NotEnoughSpaceException {
-        countWorkers+=value;
-        if (countWorkers<=0){
+        countWorkers = value;
+        System.out.println("Рабочих теперь "+countWorkers);
+        if (countWorkers <= 0) {
             throw new Exceptions.NotEnoughSpaceException("Завод не может функционировать");
         }
-        if (countWorkers>100){
-            throw new Exceptions.NotEnoughSpaceException(ponchic.businessmanPonchik.getFactoryPlace()+" не может выдержать такого количество рабочих");
+        if (countWorkers > 100) {
+            throw new Exceptions.NotEnoughSpaceException(ponchic.businessmanPonchik.getFactoryPlace() + " не может выдержать такого количество рабочих");
         }
-        if (value>0){
-            System.out.println("Рабочих увеличилось");
-        }
-        else System.out.println("Рабочих уменьшилось");
-        System.out.println("Рабочих теперь "+countWorkers);}
+    }
     protected void expensesWorker(){
         System.out.println("Каждый рабочий получает "+salaryOneWorker+" фертингов");
     }

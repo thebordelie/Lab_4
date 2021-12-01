@@ -21,10 +21,6 @@ public class Rich extends Shorties.ShortiesPersonality{
         relaxInParaboloid.wantEat();
         relaxInParaboloid.wantEatHappy();
     }
-
-
-
-
     protected void hireServ(){
         System.out.println(getName()+" нанял себе слуг");
     }

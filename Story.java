@@ -28,13 +28,14 @@ public class Story {
             try {
                 workers.setCountWorkers(6,ponchic);
                 ponchic.businessmanPonchik.ambitions();
-                workers.setCountWorkers(200,ponchic);
+                workers.setCountWorkers(2,ponchic);
             }
             catch (Exceptions.NotEnoughSpaceException e){
                 System.out.println(e.getMessage());
-                System.out.println("Что-то нужно делать с рабочими");
+
             }
             ponchic.businessmanPonchik.newFactory();
+            ponchic.businessmanPonchik.readyWork();
             ponchic.ordinary();
             ponchic.newName();
             ponchic.oldlive();

@@ -59,12 +59,13 @@ public class Ponchic extends Rich {
             System.out.println(getName()+" Купил "+countStupki+" ступок");
             stupki=countStupki;
         }
-        protected void readyWork() throws Exceptions.NotEnoughWorkException{
+        protected void readyWork() {
             System.out.println("Завод готов");
 
         }
         protected void ambitions(){System.out.println(getName()+" Хочет увеличить количество рабочих");}
         public void newFactory(){
+            System.out.println("Нехватка мест");
             System.out.println(getName()+" решил построить другое, более обширное помещение");
             setFactoryPlace("Новый завод");
         }
